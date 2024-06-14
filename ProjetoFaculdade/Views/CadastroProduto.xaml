@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoFaculdade.Views.CadastroProduto"
+             Title="CadastroProduto">
+
+    <Grid BackgroundColor="#0386D0">
+        <Grid  Margin="20" BackgroundColor="White">
+            <VerticalStackLayout Spacing="25">
+                <Label
+                    Text="Cadastro de Login"
+                    FontSize="30"
+                    HorizontalOptions="Center"
+                    Margin="20"/>
+                <Entry
+                    x:Name="codigobarrasEntry"
+                    Placeholder="Codigo de Barras"
+                    HorizontalOptions="Center"/>
+                <Entry
+                    x:Name="descricaoEntry"
+                    Placeholder="Descrição"
+                    HorizontalOptions="Center"/>
+                <Entry
+                    x:Name="precoEntry"
+                    Placeholder="Preço R$"
+                    HorizontalOptions="Center"/>
+                <Entry
+                    x:Name="marcaEntry"
+                    Placeholder="Marca"
+                    HorizontalOptions="Center"/>
+                <Entry
+                    x:Name="corEntry"
+                    Placeholder="Cor"
+                    HorizontalOptions="Center"/>
+                <Entry
+                    x:Name="estoqueEntry"
+                    Placeholder="Estoque"
+                    HorizontalOptions="Center"/>
+                <Entry
+                    x:Name="estoqueminimoEntry"
+                    Placeholder="Estoque Minimo"
+                    HorizontalOptions="Center"/>
+                <Image
+                    Source="imagemtelacadastroproduto.png"
+                    HeightRequest="200"
+                    Aspect="AspectFit"
+                    SemanticProperties.Description="dot net bot in a race car number eight"
+                    VerticalOptions="End"/>
+
+            </VerticalStackLayout>
+        </Grid>
+
+        <VerticalStackLayout VerticalOptions="End">
+            <Grid>
+                <Button
+                    Text="Voltar"
+                    Clicked="button_telahome"
+                    BackgroundColor="#0386D0"
+                    HorizontalOptions="Start"
+                    Margin="30"/>
+                <Button
+                    Text="Cadastrar"
+                    Clicked="button_telahome"
+                    BackgroundColor="#0386D0"
+                    HorizontalOptions="End"
+                    Margin="30"/>
+            </Grid>
+        </VerticalStackLayout>
+        </Grid>
+</ContentPage>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoFaculdade.Views.login"
+             Title="login">
+
+    <Grid BackgroundColor="#0386D0">
+        <Grid  Margin="20" BackgroundColor="White">
+            <VerticalStackLayout Spacing="25">
+                <Label
+                    Text="Bem - Vindo"
+                    HorizontalOptions="Center"
+                    Margin="30"
+                    FontSize="23"/>
+                <Label
+                    Text="É muito bom ter você novamente aqui"
+                    HorizontalOptions="Center"
+                    />
+                <Entry
+                    x:Name="emailEntry"
+                    HorizontalOptions="Center"
+                    Placeholder="Email                                          @"
+                    Margin="10"
+                    />
+                <Grid>
+                    <StackLayout>
+                        <Entry
+                            x:Name="senhaEntry"
+                            Placeholder="Digite sua Senha"
+                            IsPassword="True"
+                            HorizontalOptions="Center"/>
+                        <HorizontalStackLayout HorizontalOptions="Center">
+                            <CheckBox
+                                Color="#0386D0"/>
+                            <Label
+                                Text="Lembrar Senha"
+                                FontSize="11"
+                                VerticalOptions="Center"/>
+                        </HorizontalStackLayout>
+                    </StackLayout>
+                </Grid>
+
+                <Grid >
+                    <HorizontalStackLayout HorizontalOptions="Center" Spacing="30">
+                        <Button
+                            Text="Entrar"
+                            Clicked="Button_telahome"
+                            BackgroundColor="#0386D0"/>
+                        <Button
+                            Text="Registrar"
+                            Clicked="Button_telaregistro"
+                            HorizontalOptions="End"
+                            BackgroundColor="#0386D0"/>
+                    </HorizontalStackLayout>
+                </Grid>
+
+            </VerticalStackLayout>
+        </Grid>
+        <Image
+            Source="imagemtelalogin.png"
+            HeightRequest="300"
+            Aspect="AspectFit"
+            SemanticProperties.Description="dot net bot in a race car number eight"
+            VerticalOptions="End"/>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoFaculdade.Views.TelaRegistro"
+             Title="TelaRegistro">
+
+    <Grid BackgroundColor="#0386D0">
+        <Grid Margin="20" BackgroundColor="White">
+            <VerticalStackLayout Spacing="25" Padding="20">
+                <Label
+                    Text="Cadastro de Login"
+                    FontSize="30"
+                    HorizontalOptions="Center"
+                    Margin="20"/>
+                <Entry
+                    x:Name="EmailEntry"
+                    Placeholder="Email"
+                    HorizontalOptions="Center"
+                    Margin="10"/>
+                <Entry
+                    x:Name="SenhaEntry"
+                    Placeholder="Digite sua Senha"
+                    IsPassword="True"
+                    HorizontalOptions="Center"/>
+                <Entry
+                     x:Name="NomeEntry"
+                     Placeholder="Nome"
+                     HorizontalOptions="Center"/>
+                <Entry
+                    x:Name="CepEntry"
+                    Placeholder="CEP"
+                    HorizontalOptions="Center"
+                    TextChanged="CepEntry_TextChanged"/>
+                <Entry
+                    x:Name="EnderecoEntry"
+                    Placeholder="Endereço"
+                    HorizontalOptions="Center"/>
+                <Entry
+                    x:Name="CidadeEntry"
+                    Placeholder="Cidade"
+                    HorizontalOptions="Center"/>
+                <Entry
+                    x:Name="BairroEntry"
+                    Placeholder="Bairro"
+                    HorizontalOptions="Center"/>
+                <Entry
+                    x:Name="UfEntry"
+                    Placeholder="UF"
+                    HorizontalOptions="Center"/>
+                <Image
+                    Source="imagemtelaregistro.png"
+                    HeightRequest="185"
+                    Aspect="AspectFit"
+                    SemanticProperties.Description="dot net bot in a race car number eight"/>
+            </VerticalStackLayout>
+        </Grid>
+        <VerticalStackLayout VerticalOptions="End">
+            <Grid>
+                <Button
+                    Text="Voltar"
+                    Clicked="button_login"
+                    BackgroundColor="#0386D0"
+                    HorizontalOptions="Start"
+                    Margin="30"/>
+                <Button
+                    Text="Registrar"
+                    Clicked="button_login"
+                    BackgroundColor="#0386D0"
+                    HorizontalOptions="End"
+                    Margin="30"/>
+            </Grid>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

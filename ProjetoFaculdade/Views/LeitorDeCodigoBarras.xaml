@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoFaculdade.Views.LeitorDeCodigoBarras"
+             Title="LeitorDeCodigoBarras"
+             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls">
+
+    <Grid BackgroundColor="#0386D0">
+        <Grid  Margin="20" BackgroundColor="White">
+            <VerticalStackLayout Spacing="25">
+
+                <zxing:CameraBarcodeReaderView
+                    x:Name="barcodeReader"
+                    BarcodesDetected="barcodeReader_BarcodesDetected" />
+
+                <Label
+                    Text="Aponte a camera no Codigo de Barras"
+                    TextColor="#0F688D" 
+                    Style="{StaticResource Headline}"
+                    SemanticProperties.HeadingLevel="Level1"/>
+                <Image
+                    Source="imagemtelalogin.png"
+                    HeightRequest="300"
+                    Aspect="AspectFit"
+                    SemanticProperties.Description="dot net bot in a race car number eight"
+                    VerticalOptions="End"/>
+
+            </VerticalStackLayout>
+            <Button
+                Text="Voltar"
+                Clicked="button_listagemproduto"
+                BackgroundColor="#0386D0"
+                HorizontalOptions="Start"
+                VerticalOptions="End"
+                Margin="20"/>
+        </Grid>
+    </Grid>
+</ContentPage>

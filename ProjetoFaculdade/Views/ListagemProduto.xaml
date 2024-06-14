@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoFaculdade.Views.ListagemProduto"
+             Title="ListagemProduto">
+
+    <Grid BackgroundColor="#0386D0">
+        <ScrollView>
+            <Grid Margin="20" BackgroundColor="White" Padding="15">
+                <VerticalStackLayout Spacing="10">
+                    <Label
+                        Text="Listagem de Produto"
+                        FontSize="30"
+                        HorizontalOptions="Center"
+                        Margin="20"/>
+                    <Entry
+                        x:Name="entryProdutoDescricao"
+                        Placeholder="Digite a Descrição do Produto"
+                        Margin="0,0,0,10"/>
+                    <Button
+                        Text="Consultar"
+                        Clicked="OnConsultarClicked"
+                        BackgroundColor="#0386D0"
+                        TextColor="White"
+                        Margin="0,0,0,20"/>
+
+                    <!-- Lista de Produtos -->
+                    <CollectionView x:Name="collectionViewProdutos">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout Padding="10" Margin="0,0,0,10" BackgroundColor="#F0F0F0">
+                                    <Label Text="{Binding Descricao, StringFormat='Descrição: {0}'}" FontSize="20" FontAttributes="Bold" TextColor="Black"/>
+                                    <Label Text="{Binding Id, StringFormat='ID: {0}'}" TextColor="Black"/>
+                                    <Label Text="{Binding CodigoDeBarras, StringFormat='Código de Barras: {0}'}" TextColor="Black"/>
+                                    <Label Text="{Binding Marca, StringFormat='Marca: {0}'}" TextColor="Black"/>
+                                    <Label Text="{Binding Cor, StringFormat='Cor: {0}'}" TextColor="Black"/>
+                                    <Label Text="{Binding Preco, StringFormat='Preço: R$ {0:F2}'}" TextColor="Black"/>
+                                    <Label Text="{Binding Estoque, StringFormat='Estoque: {0}'}" TextColor="Black">
+                                        <Label.Triggers>
+                                            <DataTrigger TargetType="Label" Binding="{Binding IsEstoqueBaixo}" Value="True">
+                                                <Setter Property="TextColor" Value="Red" />
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                    </Label>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </VerticalStackLayout>
+            </Grid>
+        </ScrollView>
+        <VerticalStackLayout VerticalOptions="End">
+            <Grid>
+                <Button
+                    Text="Voltar"
+                    Clicked="button_telahome"
+                    BackgroundColor="#0386D0"
+                    TextColor="White"
+                    HorizontalOptions="Start"
+                    Margin="30"/>
+            </Grid>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

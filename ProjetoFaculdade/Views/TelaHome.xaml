@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoFaculdade.Views.TelaHome"
+             Title="TelaHome">
+
+    <Grid BackgroundColor="#0386D0">
+        <Grid  Margin="20" BackgroundColor="White">
+            <VerticalStackLayout Spacing="25">
+                <Label
+                    Text="Ola LAJ-Company"
+                    HorizontalOptions="Center"
+                    FontSize="20"
+                    Margin="20"/>
+
+                <Label
+                    Text="Oque vamos fazer hoje?"
+                    HorizontalOptions="Center"/>
+                <Button
+                    Text="Cadastro de Produto"
+                    Clicked="button_cadastroproduto"
+                    HorizontalOptions="Center"
+                    BackgroundColor="#0386D0"/>
+                <Button
+                    Text="Listagem de Produto"
+                    Clicked="button_listagemproduto"
+                    HorizontalOptions="Center"
+                    BackgroundColor="#0386D0"/>
+                <Button
+                    Text="Relatorio De Estoque Abaixo"
+                    Clicked="button_Relatorio"
+                    HorizontalOptions="Center"
+                    BackgroundColor="#0386D0"/>
+                <Image
+                    Source="imagemtelahome.png"
+                    HeightRequest="300"
+                    Aspect="AspectFit"
+                    SemanticProperties.Description="dot net bot in a race car number eight"/>
+
+
+                <Grid>
+                    <VerticalStackLayout>
+                        <Label
+                            Text="© 2024 LAJ-Company."
+                            HorizontalOptions="Center"
+                            FontSize="11"/>
+
+                        <Label
+                            Text="Todos os direitos recervados."
+                            HorizontalOptions="Center"
+                            FontSize="11"/>
+                    </VerticalStackLayout>
+                </Grid>
+
+                <Button
+                    Text="Sair"
+                    Clicked="button_telalogin"
+                    BackgroundColor="#0386D0"
+                    HorizontalOptions="Start"
+                    Margin="20"/>
+
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>
